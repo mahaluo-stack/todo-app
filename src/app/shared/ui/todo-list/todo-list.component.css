@@ -1,0 +1,34 @@
+.newTodoInput {
+    border: none;
+    font-size: 20px;
+    padding: 0;
+}
+
+.newTodoInput::placeholder {
+    color: gray;
+}
+
+.disabled {
+    opacity: 0.4;
+}
+
+.addTodoBtn:hover {
+    opacity: 0.65;
+    cursor: pointer;
+}
+
+.addTodoBtn:active {
+    box-shadow: 2px 2px 5px gray;
+}
+
+.todoRow {
+    width: calc(100% - 1px);
+    height: 70px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}

@@ -1,0 +1,9 @@
+<div style="width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: space-between;">
+    <div style="width: 80%; height: 100%; display: flex; flex-direction: column;">
+        <p id="{{'todo'+todo.id.toString()}}" style="font-size: 20px; padding: 0; margin: 3px 0 0 3px;">{{todo.title}}</p>
+        <p id="{{'todo'+todo.timeString}}" style="padding: 0; margin: 3px 0 0 3px;">{{todo.timeString}}</p>
+    </div> 
+    <div style="width: 20%; height: 100%; display: flex; flex-direction: row; justify-content: flex-end;">
+        <div id="del" class="btn" (click)="handleRemove(todo.id)"></div>
+    </div>
+</div>

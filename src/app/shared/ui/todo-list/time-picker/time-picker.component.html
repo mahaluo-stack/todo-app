@@ -1,0 +1,12 @@
+<div class="time-picker">
+    <select (change)="onHoursChange($any($event.target).value)">
+      <option *ngFor="let hour of hours" id="{{'timepicker'+hour}}" [value]="hour" [selected]="hour === selectedHours">{{hour}}</option>
+    </select>
+    <div style="display: flex; justify-content: center; align-items: center;">:</div>
+    <select (change)="onMinutesChange($any($event.target).value)">
+      <option *ngFor="let minute of minutes" id="{{('timepicker'+minute)}}" [value]="minute" [selected]="minute === selectedMinutes">{{minute}}</option>
+    </select>
+    <select id="ampm" (change)="onAmPmChange($any($event.target).value)">
+      <option *ngFor="let ampm of ampmOptions" id="{{ampm}}" [value]="ampm" [selected]="ampm === selectedAmPm">{{ampm}}</option>
+    </select>
+  </div>

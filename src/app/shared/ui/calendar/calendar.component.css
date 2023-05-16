@@ -1,0 +1,84 @@
+.calendarWrapper {
+    background: linear-gradient(-45deg, #f80c12, #ff4422, #ff9933, #12bdb9, #4444dd, #442299);
+    background-size: 400% 400%;
+    animation: gradient 100s ease infinite;
+}
+
+.headerBtn {
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: 3px;
+}
+
+.headerBtn:hover {
+    opacity: 0.65;
+}
+
+.headerBtn p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.calendarGrid {
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+    column-gap: 1px;
+    row-gap: 1px;
+}
+
+.selectedCell {
+    background-color: white;
+    border: 2px solid black;
+}
+
+.idleCell {
+    background-color: white;
+}
+
+.idleCell:hover {
+    border: 1px solid black;
+}
+
+.textWrapper {
+    width: calc(100%);
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 11px;
+    margin-left: 3px;
+}
+
+#today p {
+    color: red;
+}
+
+#prev {
+    background-color: #d6d3d3;
+    color: #ffffff;
+}
+
+#next {
+    background-color: #d6d3d3;
+    color: #ffffff;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
